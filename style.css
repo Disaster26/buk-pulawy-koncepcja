@@ -167,14 +167,119 @@ p{margin:0 0 1em}
 /* dolny pasek (telefon) */
 .mob{display:none}
 
-/* cookies */
-.cookies{position:fixed;left:24px;bottom:24px;z-index:90;max-width:440px;background:#fff;color:var(--tekst);padding:22px;box-shadow:0 18px 50px rgba(4,22,48,.28);border-top:4px solid var(--niebieski);font-size:15px}
-.cookies p{margin:0 0 10px}
-.ck-tyt{font:700 17px Montserrat,sans-serif;color:var(--granat)}
-.ck-opcje{display:grid;gap:8px;margin:6px 0 14px}
-.ck-opcje label{display:flex;gap:8px;align-items:center}
-.ck-btn{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}
-.ck-btn .link{color:var(--granat);font-size:15px;margin-left:4px}
+
+/* link "dalej" */
+.dalej{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-weight:600;color:var(--niebieski);text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
+.dalej svg{width:15px;height:15px;transition:transform .2s}
+.dalej:hover{border-bottom-color:var(--niebieski)}
+.dalej:hover svg{transform:translate(2px,-2px)}
+.karta h3 a{color:inherit;text-decoration:none}
+.karta h3 a:hover{color:var(--niebieski)}
+.sekcja-gora p a{font-weight:600;white-space:nowrap}
+
+/* nagłówek podstrony */
+.pasek{position:relative;background:var(--granat);color:#fff;padding:56px 0 64px;overflow:hidden;isolation:isolate}
+.pasek .dk-wykres{width:min(40vw,520px);opacity:.9}
+.okruchy{display:flex;gap:10px;flex-wrap:wrap;font-size:14px;color:#9FB3CF;margin-bottom:22px}
+.okruchy a{color:#D5E0EF;text-decoration:none}
+.okruchy a:hover{text-decoration:underline}
+.pasek h1{color:#fff;font-size:clamp(32px,3.8vw,54px);font-weight:800;max-width:19ch;line-height:1.1}
+.pasek-lead{color:#D5E0EF;font-size:clamp(17px,1.3vw,19px);max-width:38em;margin:20px 0 0}
+.pasek-cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:30px}
+.pasek-tel{color:#fff;font-weight:600;text-decoration:none;border-bottom:2px solid rgba(76,147,240,.7);padding-bottom:2px}
+.pasek-tel:hover{border-bottom-color:#fff}
+
+/* zasady pracy (o biurze) */
+.zasady{background:var(--szary);padding:96px 0}
+.zasady h2{margin-bottom:40px}
+.zasady-siatka{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.zasada{position:relative;background:#fff;padding:30px 28px 34px;border-bottom:4px solid var(--niebieski)}
+.zasada h3{margin-bottom:12px}
+.zasada p{color:var(--tekst2);margin:0;font-size:16px}
+.zasada .karta-wykres,.etap .karta-wykres{position:static;margin-bottom:20px}
+.o-druga{padding-top:96px}
+.o-odwr{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr)}
+.o-foto-mala img{max-width:520px;aspect-ratio:auto}
+.o-linki{display:flex;gap:28px;flex-wrap:wrap}
+
+/* oferta - podstrona */
+.u-spis{display:flex;gap:12px;flex-wrap:wrap;padding:28px 0 0}
+.u-spis a{color:var(--granat);font-weight:600;text-decoration:none;padding:10px 16px;box-shadow:inset 0 0 0 2px var(--linia);border-radius:3px}
+.u-spis a:hover{box-shadow:inset 0 0 0 2px var(--niebieski);color:var(--niebieski)}
+.usluga{padding:80px 0;scroll-margin-top:calc(var(--head) + 8px)}
+.usluga+.usluga{border-top:1px solid var(--linia)}
+.u-siatka{display:grid;grid-template-columns:360px minmax(0,1fr);gap:72px;align-items:start}
+.usluga-odwr .u-siatka{grid-template-columns:minmax(0,1fr) 360px}
+.usluga-odwr .u-foto{order:2}
+.u-foto{margin:0;position:relative;padding:0 0 28px 28px}
+.u-foto::before{content:"";position:absolute;left:0;bottom:0;width:62%;height:70%;background:linear-gradient(var(--niebieski),var(--niebieski)) 0 100%/30% 70% no-repeat,linear-gradient(var(--granat),var(--granat)) 50% 100%/22% 46% no-repeat,linear-gradient(var(--niebieski),var(--niebieski)) 100% 100%/30% 100% no-repeat;z-index:0}
+.u-foto img{position:relative;z-index:1;width:100%;max-width:360px;aspect-ratio:1;object-fit:cover}
+.u-tekst h2{margin-bottom:20px}
+.u-tekst p{color:var(--tekst2);max-width:40em}
+.u-tekst .slupki-lista{max-width:40em;margin:8px 0 26px}
+.u-dop{font-size:16px;margin:0}
+
+/* dla kogo - podstrona */
+.etapy{padding:96px 0}
+.etapy-siatka{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px}
+.etap h2{font-size:clamp(24px,2.4vw,32px);margin-bottom:16px}
+.etap p{color:var(--tekst2);margin:0}
+
+/* kontakt - skrót na głównej */
+.kontakt-skrot{padding:104px 0}
+.ks-siatka{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:stretch}
+.ks-akcje{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.ks-akcje .dalej{margin-top:0}
+
+/* wezwanie na dole podstron */
+.cta-dol{background:var(--szary);padding:72px 0;border-top:1px solid var(--linia)}
+.cta-in{display:flex;justify-content:space-between;align-items:center;gap:40px}
+.cta-in h2{font-size:clamp(26px,2.6vw,36px);max-width:22ch}
+.cta-in p{color:var(--tekst2);margin:14px 0 0;max-width:36em}
+.cta-akcje{display:flex;align-items:center;gap:22px;flex:none}
+.cta-tel{color:var(--granat);font-weight:600;text-decoration:none;font-size:18px}
+.cta-tel:hover{color:var(--niebieski)}
+
+/* polityka */
+.pol{padding:56px 0 80px}
+.pol .wrap{max-width:780px}
+.pol h2{font-size:22px;margin:36px 0 10px}
+.pol h2:first-child{margin-top:0}
+.pol p,.pol li{color:var(--tekst2)}
+.pol ul{padding-left:20px}
+
+@media (max-width:1100px){
+  .u-siatka{grid-template-columns:300px minmax(0,1fr);gap:48px}
+  .usluga-odwr .u-siatka{grid-template-columns:minmax(0,1fr) 300px}
+  .cta-in{flex-direction:column;align-items:flex-start;gap:28px}
+}
+@media (max-width:900px){
+  .zasady-siatka{grid-template-columns:minmax(0,1fr);gap:16px}
+  .o-odwr .o-foto{order:2}
+  .ks-siatka{grid-template-columns:minmax(0,1fr)}
+  .u-siatka,.usluga-odwr .u-siatka{grid-template-columns:minmax(0,1fr);gap:32px}
+  .usluga-odwr .u-foto{order:0}
+  .u-foto{max-width:340px}
+  .etapy-siatka{grid-template-columns:minmax(0,1fr);gap:40px}
+}
+@media (max-width:760px){
+  .pasek{padding:34px 0 40px}
+  .pasek .dk-wykres{width:80vw;opacity:.6}
+  .okruchy{margin-bottom:16px;font-size:13.5px}
+  .pasek h1{font-size:clamp(28px,7.6vw,34px)}
+  .pasek-lead{font-size:16px;margin-top:14px}
+  .pasek-cta{margin-top:24px;gap:14px 18px}
+  .zasady,.etapy,.usluga,.kontakt-skrot{padding:64px 0}
+  .o-druga{padding-top:64px}
+  .u-spis{padding-top:20px}
+  .u-spis a{padding:9px 12px;font-size:15px}
+  .cta-dol{padding:56px 0}
+  .cta-akcje{flex-wrap:wrap;width:100%}
+  .cta-akcje .btn{flex:1 1 auto;justify-content:center}
+  .ks-akcje .btn{width:100%;justify-content:center}
+  .kontakt-skrot{padding-bottom:0}
+  .kontakt-skrot .k-mapa{margin:0 -16px}
+}
 
 /* niski komputer */
 @media (min-width:761px) and (max-height:820px){
@@ -252,7 +357,6 @@ p{margin:0 0 1em}
   .mob.widac{transform:none}
   .mob a{display:flex;align-items:center;justify-content:center;height:48px;border-radius:3px;font-weight:600;text-decoration:none;color:var(--granat);box-shadow:inset 0 0 0 2px var(--granat)}
   .mob a.mob-cta{background:var(--niebieski);color:#fff;box-shadow:none}
-  .cookies{left:12px;right:12px;bottom:12px;max-width:none;padding:18px}
 }
 @media (max-width:760px) and (max-height:700px){
   .hero h1{font-size:clamp(25px,7vw,30px)}
