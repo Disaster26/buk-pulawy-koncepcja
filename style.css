@@ -90,6 +90,7 @@ p{margin:0 0 1em}
 .o-foto{position:relative;margin:0 0 0 0;padding:0 0 44px 44px}
 .o-foto img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:40% 50%;position:relative;z-index:1}
 .o-slupki{position:absolute;left:0;bottom:0;width:120px;height:160px;z-index:0}
+.o-foto img.o-zespol{aspect-ratio:auto;height:auto;max-width:1039px;object-fit:contain}
 
 /* oferta */
 .oferta{background:var(--szary);padding:104px 0}
